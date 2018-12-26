@@ -6,7 +6,8 @@ class App extends Component {
     super();
     this.state = {
       current: 0,
-      prev: 0
+      prev: 0,
+      adding: false
     }
   }
 
@@ -14,6 +15,8 @@ class App extends Component {
     console.log("Clearing calculator...");
     this.setState({
       current: 0,
+      prev: 0,
+      adding: false
     });
   }
 
@@ -87,6 +90,35 @@ class App extends Component {
     });
   }
 
+  addNumbers = () => {
+    if (this.state.prev !== 0) {
+      let sum = this.state.current + this.state.prev;
+      this.setState({
+        prev: sum,
+        current: sum,
+        adding: true
+      });
+    } else {
+      this.setState({
+        prev: this.state.current,
+        adding: true
+      });
+    }
+    // console.log("Current: ", this.state.current)
+    // console.log("Prev: ", this.state.prev)
+    // console.log("Adding: ", this.state.adding)
+  }
+
+  resolveEquation = () => {
+    if (this.state.adding === true) {
+      let adding = this.state.current + this.state.prev;
+      this.setState({
+        current: adding,
+        adding: false
+      })
+    } 
+    // else if 
+  }
 
   render() {
     return (
@@ -116,12 +148,12 @@ class App extends Component {
           <button onClick={this.setNumber1} className="custom-button">1</button>
           <button onClick={this.setNumber2} className="custom-button">2</button>
           <button onClick={this.setNumber3} className="custom-button">3</button>
-          <button className="custom-button">+</button>
+          <button onClick={this.addNumbers} className="custom-button">+</button>
         </div>
         <div className="calculator-row">
           <button onClick={this.setNumber0} className="custom-button-2">0</button>
           <button className="custom-button">.</button>
-          <button className="custom-button">=</button>
+          <button onClick={this.resolveEquation} className="custom-button">=</button>
         </div>
       </div>
     );
