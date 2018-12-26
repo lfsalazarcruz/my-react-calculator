@@ -1,10 +1,34 @@
 .App {
   margin: 0 auto;
   width: 230px;
-  border: 1px solid blue;
 }
 
 .App .calculator-output {
-  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  background-color: rgba(58, 57, 57, 0.8);
+  color: white;
   width: 100%;
+  height: 60px;
+}
+
+.App .calculator-output .output-text {
+  width: 100%;
+  margin: 5px;
+  text-align: end;
+  font-size: 2.8rem;
+}
+
+.App .calculator-row .custom-button {
+  width: 57.5px;
+  height: 48px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.App .calculator-row .custom-button-2 {
+  width: 115px;
+  height: 48px;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
