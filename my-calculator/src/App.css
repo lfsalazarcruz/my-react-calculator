@@ -1,3 +1,10 @@
 .App {
-  text-align: center;
+  margin: 0 auto;
+  width: 230px;
+  border: 1px solid blue;
+}
+
+.App .calculator-output {
+  border: 1px solid blue;
+  width: 100%;
 }
