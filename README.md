@@ -1,2 +1,2 @@
-# my-react-calculator
+# dash-board
 React calculator
