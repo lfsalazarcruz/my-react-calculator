@@ -22,92 +22,146 @@ class App extends Component {
 
   setNumber0 = () => {
     console.log("Setting number 0");
-    this.setState({
-      current: 0
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 0;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 0
+      });
+    }
   }
 
   setNumber1 = () => {
     console.log("Setting number 1");
-    this.setState({
-      current: 1
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 1;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 1
+      });
+    }
   }
 
   setNumber2 = () => {
     console.log("Setting number 2");
-    this.setState({
-      current: 2
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 2;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 2
+      });
+    }
   }
 
   setNumber3 = () => {
     console.log("Setting number 3");
-    this.setState({
-      current: 3
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 3;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 3
+      });
+    }
   }
 
   setNumber4 = () => {
     console.log("Setting number 4");
-    this.setState({
-      current: 4
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 4;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 4
+      });
+    }
   }
 
   setNumber5 = () => {
     console.log("Setting number 5");
-    this.setState({
-      current: 5
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 5;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 5
+      });
+    }
   }
 
   setNumber6 = () => {
     console.log("Setting number 6");
-    this.setState({
-      current: 6
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 6;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 6
+      });
+    }
   }
 
   setNumber7 = () => {
     console.log("Setting number 7");
-    this.setState({
-      current: 7
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 7;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 7
+      });
+    }
   }
 
   setNumber8 = () => {
     console.log("Setting number 8");
-    this.setState({
-      current: 8
-    });
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 8;
+      this.setState({
+        current: parseInt(digits, 10)
+      });
+    } else {
+      this.setState({
+        current: 8
+      });
+    }
   }
 
   setNumber9 = () => {
     console.log("Setting number 9");
-    this.setState({
-      current: 9
-    });
-  }
-
-  addNumbers = () => {
-    if (this.state.prev !== 0) {
-      let sum = this.state.current + this.state.prev;
+    if(this.state.current !== null) {
+      let digits = this.state.current.toString() + 9;
       this.setState({
-        prev: sum,
-        current: sum,
-        adding: true
+        current: parseInt(digits, 10)
       });
     } else {
       this.setState({
-        prev: this.state.current,
-        adding: true
+        current: 9
       });
     }
-    // console.log("Current: ", this.state.current)
-    // console.log("Prev: ", this.state.prev)
-    // console.log("Adding: ", this.state.adding)
   }
+
+  // addNumbers = () => {
+  // }
 
   resolveEquation = () => {
     if (this.state.adding === true) {
