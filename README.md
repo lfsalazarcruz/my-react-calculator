@@ -8,4 +8,5 @@ Created with React.js: https://reactjs.org/.
 I'm replicating Apple's dashboard from Apple's Macbook Pro.
 
 1.- React-Calculator: Created with React.
+
 2.- react-draggable: For the calculator to be draggable, I used the react-draggable package https://www.npmjs.com/package/react-draggable. 
