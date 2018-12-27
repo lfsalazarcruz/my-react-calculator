@@ -220,11 +220,17 @@ class App extends Component {
     if(this.state.prev !== null || this.state.current !== 0) {
       this.setState({
         adding: true,
+        subtraction: false,
+        multiply: false,
+        divide: false,
         prev: this.state.current,
       });
     } else {
       this.setState({
         adding: false,
+        subtraction: false,
+        multiply: false,
+        divide: false,
       })
     }
   }
@@ -232,12 +238,18 @@ class App extends Component {
   subtractNumbers = () => {
     if(this.state.prev !== null || this.state.current !== 0) {
       this.setState({
+        adding: false,
         subtraction: true,
+        multiply: false,
+        divide: false,
         prev: this.state.current,
       });
     } else {
       this.setState({
+        adding: false,
         subtraction: false,
+        multiply: false,
+        divide: false,
       })
     }
   }
@@ -245,12 +257,18 @@ class App extends Component {
   multiplyNumbers = () => {
     if(this.state.prev !== null || this.state.current !== 0) {
       this.setState({
+        adding: false,
+        subtraction: false,
         multiply: true,
+        divide: false,
         prev: this.state.current,
       });
     } else {
       this.setState({
+        adding: false,
+        subtraction: false,
         multiply: false,
+        divide: false,
       })
     }
   }
@@ -258,14 +276,27 @@ class App extends Component {
   divideNumbers = () => {
     if(this.state.prev !== null || this.state.current !== 0) {
       this.setState({
+        adding: false,
+        subtraction: false,
+        multiply: false,
         divide: true,
         prev: this.state.current,
       });
     } else {
       this.setState({
+        adding: false,
+        subtraction: false,
+        multiply: false,
         divide: false,
       })
     }
+  }
+
+  changeSymbol = () => {
+    let switchSymbol = -1*this.state.current;
+    this.setState({
+      current: switchSymbol
+    });
   }
 
   resolveEquation = () => {
@@ -311,7 +342,7 @@ class App extends Component {
         </div>
         <div className="calculator-row">
           <button onClick={this.clearCalculator} className="custom-button">C</button>
-          <button className="custom-button">+/-</button>
+          <button onClick={this.changeSymbol} className="custom-button">+/-</button>
           <button className="custom-button">%</button>
           <button onClick={this.divideNumbers} className="custom-button">÷</button>
         </div>
