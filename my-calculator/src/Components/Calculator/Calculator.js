@@ -341,9 +341,9 @@ class Calculator extends Component {
           <p className="output-text">{this.state.current}</p>
         </div>
         <div className="calculator-row">
-          <button onClick={this.clearCalculator} className="custom-button">C</button>
-          <button onClick={this.changeSymbol} className="custom-button">+/-</button>
-          <button className="custom-button">%</button>
+          <button onClick={this.clearCalculator} className="custom-button custom-button-3">C</button>
+          <button onClick={this.changeSymbol} className="custom-button custom-button-3">+/-</button>
+          <button className="custom-button custom-button-3">%</button>
           <button onClick={this.divideNumbers} className="custom-button">÷</button>
         </div>
         <div className="calculator-row">

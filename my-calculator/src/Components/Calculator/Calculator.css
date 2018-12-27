@@ -47,6 +47,10 @@
 	color: white;
 }
 
+.Calculator .calculator-row .custom-button-3 {
+	background-color: rgba(53, 53, 56, 0.8);
+}
+
 .Calculator .calculator-row .custom-button-2 {
 	width: 115px;
 	height: 48px;
