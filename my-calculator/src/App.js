@@ -8,6 +8,7 @@ class App extends Component {
       current: 0,
       prev: null,
       adding: false,
+      subtraction: false,
     }
   }
 
@@ -16,18 +17,19 @@ class App extends Component {
     this.setState({
       current: 0,
       prev: 0,
-      adding: false
+      adding: false,
+      subtraction: false,
     });
   }
 
   setNumber0 = () => {
     console.log("Setting number 0");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 0
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 0;
       this.setState({
         current: parseInt(digits, 10),
@@ -41,12 +43,12 @@ class App extends Component {
 
   setNumber1 = () => {
     console.log("Setting number 1");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 1
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 1;
       this.setState({
         current: parseInt(digits, 10)
@@ -60,12 +62,12 @@ class App extends Component {
 
   setNumber2 = () => {
     console.log("Setting number 2");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 2
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 2;
       this.setState({
         current: parseInt(digits, 10)
@@ -79,12 +81,12 @@ class App extends Component {
 
   setNumber3 = () => {
     console.log("Setting number 3");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 3
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 3;
       this.setState({
         current: parseInt(digits, 10)
@@ -98,12 +100,12 @@ class App extends Component {
 
   setNumber4 = () => {
     console.log("Setting number 4");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 4
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 4;
       this.setState({
         current: parseInt(digits, 10)
@@ -117,12 +119,12 @@ class App extends Component {
 
   setNumber5 = () => {
     console.log("Setting number 5");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 5
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 5;
       this.setState({
         current: parseInt(digits, 10)
@@ -136,12 +138,12 @@ class App extends Component {
 
   setNumber6 = () => {
     console.log("Setting number 6");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 6
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 6;
       this.setState({
         current: parseInt(digits, 10)
@@ -155,12 +157,12 @@ class App extends Component {
 
   setNumber7 = () => {
     console.log("Setting number 7");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 7
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 7;
       this.setState({
         current: parseInt(digits, 10)
@@ -174,12 +176,12 @@ class App extends Component {
 
   setNumber8 = () => {
     console.log("Setting number 8");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 8
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 8;
       this.setState({
         current: parseInt(digits, 10)
@@ -193,12 +195,12 @@ class App extends Component {
 
   setNumber9 = () => {
     console.log("Setting number 9");
-    if(this.state.adding === true) {
+    if(this.state.adding === true || this.state.subtraction === true) {
       this.setState({
         current: 9
       });
     }
-    else if(this.state.adding === false && this.state.current !== null) {
+    else if((this.state.adding === false || this.state.subtraction === false) && this.state.current !== null) {
       let digits = this.state.current.toString() + 9;
       this.setState({
         current: parseInt(digits, 10)
@@ -223,6 +225,19 @@ class App extends Component {
     }
   }
 
+  subtractNumbers = () => {
+    if(this.state.prev !== null || this.state.current !== 0) {
+      this.setState({
+        subtraction: true,
+        prev: this.state.current,
+      });
+    } else {
+      this.setState({
+        subtraction: false,
+      })
+    }
+  }
+
   resolveEquation = () => {
     if (this.state.adding === true) {
       let sum = this.state.prev + this.state.current;
@@ -231,6 +246,14 @@ class App extends Component {
         prev: 0,
         adding: false
       });
+    }
+    if (this.state.subtraction === true) {
+      let subtract = this.state.prev - this.state.current;
+      this.setState({
+        current: subtract,
+        prev: 0,
+        subtraction: false,
+      })
     }
   }
 
@@ -256,7 +279,7 @@ class App extends Component {
           <button onClick={this.setNumber4} className="custom-button">4</button>
           <button onClick={this.setNumber5} className="custom-button">5</button>
           <button onClick={this.setNumber6} className="custom-button">6</button>
-          <button className="custom-button">-</button>
+          <button onClick={this.subtractNumbers} className="custom-button">-</button>
         </div>
         <div className="calculator-row">
           <button onClick={this.setNumber1} className="custom-button">1</button>

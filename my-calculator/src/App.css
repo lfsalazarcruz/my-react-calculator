@@ -23,7 +23,13 @@
   width: 57.5px;
   height: 48px;
   font-size: 1.4rem;
+  transition: all .3s;
+}
+
+.App .calculator-row .custom-button:hover {
   cursor: pointer;
+  background-color: rgb(209, 35, 64);
+  color: white;
 }
 
 .App .calculator-row .custom-button-2 {
