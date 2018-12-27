@@ -1,0 +1,40 @@
+.Calculator {
+	margin: 0 auto;
+	width: 230px;
+}
+
+.Calculator .calculator-output {
+	display: flex;
+	align-items: center;
+	background-color: rgba(58, 57, 57, 0.8);
+	color: white;
+	width: 100%;
+	height: 60px;
+}
+
+.Calculator .calculator-output .output-text {
+	width: 100%;
+	margin: 5px;
+	text-align: end;
+	font-size: 2.8rem;
+}
+
+.Calculator .calculator-row .custom-button {
+	width: 57.5px;
+	height: 48px;
+	font-size: 1.4rem;
+	transition: all .3s;
+}
+
+.Calculator .calculator-row .custom-button:hover {
+	cursor: pointer;
+	background-color: rgb(209, 35, 64);
+	color: white;
+}
+
+.Calculator .calculator-row .custom-button-2 {
+	width: 115px;
+	height: 48px;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
