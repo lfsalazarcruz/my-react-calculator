@@ -25,7 +25,7 @@ class App extends Component {
             <Calculator/>
           </div>
         </Draggable>
-        <Draggable
+        {/* <Draggable
           axis="both"
           handle=".handle"
           defaultPosition={{x: 0, y: 0}}
@@ -34,11 +34,11 @@ class App extends Component {
           scale={1}
           onStart={this.handleStart}
           onDrag={this.handleDrag}
-          onStop={this.handleStop}>
+          onStop={this.handleStop}> */}
           <div className="handle">
             < WeatherApp/>
           </div>
-        </Draggable>
+        {/* </Draggable> */}
       </div>
     );
   }

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 // import './WeatherApp.css';
 
-class WeatherConditions extends Component {
-	render() {
-		return(
-			<div>This is weather conditions</div>
-		);
-	}
+const WeatherConditions= (props) => {
+	return(
+		<div>This is weather </div>
+	);
 }
 
 export default WeatherConditions;
