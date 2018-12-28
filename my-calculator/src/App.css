@@ -1,5 +1,15 @@
 
 .calculator-app {
-    border: 1px solid blue;
     width: 232px;
+    margin-left: 450px;
+    margin-top: 50px;
+}
+
+.my-weather-app {
+    width: 410px;
+    position: absolute;
+    height: 50px;
+    border-radius: 50px 50px 0px 0px;
+    background-color: rgba(41, 133, 255, 0.4);
+    cursor: pointer;
 }
