@@ -12,9 +12,10 @@ class WeatherApp extends Component {
 			country: '',
 			temperature: undefined,
 			humidity: undefined,
+			tempmin: undefined,
+			tempmax: undefined,
 			description: undefined,
 			error: undefined,
-			icon: undefined,
 		}
 	}
 
@@ -36,15 +37,34 @@ class WeatherApp extends Component {
 				temperature: response.main.temp,
 				humidity: response.main.humidity,
 				description: response.weather[0].description,
-				icon: response.weather[0].icon,
+				tempmin: response.main.temp_min,
+				tempmax: response.main.temp_max,
 				error: '',
 			});
 		} else if(this.state.city || this.state.country) {
 			this.setState({
 				error: 'Please enter a city and country...'
 			});
+		} else if(!this.state.city || !this.state.country) {
+			this.setState({
+				city: '',
+				country: '',
+				temperature: undefined,
+				humidity: undefined,
+				description: undefined,
+				tempmin: undefined,
+				tempmax: undefined,
+				error: '',
+			});
 		} else {
 			this.setState({
+				city: '',
+				country: '',
+				temperature: undefined,
+				humidity: undefined,
+				description: undefined,
+				tempmin: undefined,
+				tempmax: undefined,
 				error: 'City or Country not found. Try again...'
 			});
 		}
@@ -53,7 +73,7 @@ class WeatherApp extends Component {
 	render() {
 		return(
 			<div className="weather-app">
-				<h3 className="weather-app-title">WeatherApp</h3>
+				<h3 className="weather-app-title">My Weather App</h3>
 				<Form 
 					loadWeather={this.getWeather}
 					city={this.state.city}
@@ -64,6 +84,8 @@ class WeatherApp extends Component {
 					country={this.state.country}
 					temperature={this.state.temperature}
 					humidity={this.state.humidity}
+					tempmin={this.state.tempmin}
+					tempmax={this.state.tempmax}
 					description={this.state.description}
 					error={this.state.error}
 					/>

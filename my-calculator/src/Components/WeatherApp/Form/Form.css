@@ -1,7 +1,7 @@
 .form {
-    margin: 5px 15px;
+    margin: 10px 25px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .form .form-input {
@@ -19,12 +19,13 @@
     border: 1px solid rgb(0, 153, 255);
     color: white;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .form button:hover {
-    background-color: white;
+    background-color: rgb(226, 194, 9);
     color: black;
-    border: 1px solid white;
+    border: 1px solid rgb(226, 194, 9);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
