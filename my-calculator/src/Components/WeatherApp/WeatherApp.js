@@ -24,7 +24,7 @@ class WeatherApp extends Component {
 
 	getWeather = async (event) => {
 		const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-		
+
 		event.preventDefault();
 		const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city},${this.state.country}&units=metric&appid=${API_KEY}`);
 		const response = await api_call.json();
@@ -52,8 +52,8 @@ class WeatherApp extends Component {
 	
 	render() {
 		return(
-			<div>
-				<h3>WeatherApp</h3>
+			<div className="weather-app">
+				<h3 className="weather-app-title">WeatherApp</h3>
 				<Form 
 					loadWeather={this.getWeather}
 					city={this.state.city}
