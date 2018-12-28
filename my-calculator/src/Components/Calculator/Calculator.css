@@ -1,5 +1,4 @@
 .Calculator {
-	/* margin: 0 auto; */
 	width: 230px;
 	border: .5px solid black;	
 	cursor: pointer;
@@ -9,7 +8,7 @@
 .Calculator .calculator-output {
 	display: flex;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(54, 53, 53, 0.65);
 	color: white;
 	width: 100%;
 	height: 60px;
@@ -38,7 +37,7 @@
 	background-color: rgba(121, 121, 128, 0.8);
 	border: none;
 	color: white;
-	border-left: .1px solid black;
+	border-right: .1px solid black;
 	border-top: .1px solid black;
 }
 
@@ -59,5 +58,12 @@
 	color: white;
 	border: none;
 	border-top: .1px solid black;
-	border-left: .1px solid black;
+	border-right: .1px solid black;
+	border-left: none;
+}
+
+
+.Calculator .calculator-row .custom-button-2:hover {
+	background-color: rgb(209, 35, 64);
+	color: white;
 }

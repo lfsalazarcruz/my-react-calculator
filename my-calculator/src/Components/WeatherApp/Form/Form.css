@@ -8,7 +8,7 @@
     background-color: rgba(14, 14, 53, 0.75);
     color: rgba(167, 173, 184, 0.9);
     border-radius: 15px;
-    height: 1.6rem;
+    height: 1.8rem;
     width: 130px;
     border: 1px solid rgba(116, 169, 255, 0.8);
 }
@@ -30,6 +30,10 @@
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgba(167, 173, 184, 0.9);
-    font-size: 1rem;
+    font-size: .8rem;
     text-align: center;
+    /* border: 1px solid red; */
+    height: 1.6rem;
+    margin: 0 5px;
+    padding: 0 5px;
 }
