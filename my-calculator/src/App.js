@@ -21,7 +21,7 @@ class App extends Component {
           onStart={this.handleStart}
           onDrag={this.handleDrag}
           onStop={this.handleStop}>
-          <div className="handle">
+          <div className="handle calculator-app">
             <Calculator/>
           </div>
         </Draggable>
