@@ -1,4 +1,4 @@
-# Dash-board
+# Dash-board Project
 
 I started this project thinking in recreating a calculator fully functional. After getting that done, I decided to replicate part of Apple's dashboard with the idea of also recreating the Weather app. 
 
