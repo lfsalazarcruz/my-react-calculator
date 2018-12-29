@@ -54,11 +54,20 @@ class CalendarApp extends Component {
 		);
 	}
 
+	onChangeMonth = (e, month) => {
+		this.setState({
+			showMonthPopup: !this.state.showMonthPopup
+		});
+	}
+
 	MonthNav = () => {
 		return (
-			<span className="label-month">
+			<span onClick={(e) => {this.onChangeMonth(e,this.month())}} 
+			className="label-month">
 				{this.month()}
+				{this.state.showMonthPopup &&
 				<this.SelectList data={this.months} />
+				}
 			</span>
 		);
 	}

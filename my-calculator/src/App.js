@@ -21,9 +21,9 @@ class App extends Component {
           onStart={this.handleStart}
           onDrag={this.handleDrag}
           onStop={this.handleStop}>
-          <div className="handle calculator-app">
-            <Calculator/>
-          </div>
+            <div className="handle calculator-app">
+              <Calculator/>
+            </div>
         </Draggable>
         <Draggable
           axis="both"
@@ -38,10 +38,23 @@ class App extends Component {
           <div>
             <div className="handle my-weather-app">
           </div>
-          <WeatherApp/>
+            <WeatherApp/>
           </div>
         </Draggable>
-        <CalendarApp/>
+        <Draggable
+          axis="both"
+          handle=".handle"
+          defaultPosition={{x: 0, y: 0}}
+          position={null}
+          grid={[1, 1]}
+          scale={1}
+          onStart={this.handleStart}
+          onDrag={this.handleDrag}
+          onStop={this.handleStop}>
+            <div className="handle">
+              <CalendarApp/>
+            </div>
+          </Draggable>
       </div>
     );
   }
