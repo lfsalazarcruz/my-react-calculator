@@ -14,7 +14,7 @@ I'm replicating Apple's dashboard from Apple's Macbook Pro.
 3.- React-CalendarApp: For the react-calendarapp, I added the react-moment package (https://momentjs.com/).
 Read the documentation and found some tutorials to make the calendar work. Creating the calendar is way more difficult than creating the previous apps.
 
-Video Tutorials: 
+React-Calendar Video Tutorials: 
 
 Part 1: https://www.youtube.com/watch?v=9U0uTNfY1UA&index=2&list=LLlnguOdb1vnm2s-VA1OTXWw&t=0s
 
