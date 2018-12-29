@@ -7,7 +7,7 @@ The UI should display the main apps (calculator and weather app) and these need 
 Created with React.js: https://reactjs.org/.
 I'm replicating Apple's dashboard from Apple's Macbook Pro.
 
-1.- React-Calculator: Created with React. Created the calculator without watching any tutorials.
+1.- React-Calculator: Created the calculator without watching any tutorials.
 
 2.- React-WeatherApp: For the react-weatherapp I used the openweathermap.org API (https://openweathermap.org/api). Saw a couple of tutorials and read the documentation on how to use and connect the API to my react-app.
 
