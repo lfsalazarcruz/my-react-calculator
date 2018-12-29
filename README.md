@@ -11,6 +11,8 @@ I'm replicating Apple's dashboard from Apple's Macbook Pro.
 
 2.- React-WeatherApp: For the react-weatherapp I used the openweathermap.org API (https://openweathermap.org/api). Saw a couple of tutorials and read the documentation on how to use and connect the API to my react-app.
 
+React-WeatherApp resource: https://medium.com/@peterekeneeze/build-a-react-js-weather-app-with-stateless-functional-components-e61567004b54
+
 3.- React-CalendarApp: For the react-calendarapp, I added the react-moment package (https://momentjs.com/).
 Read the documentation and found some tutorials to make the calendar work. Creating the calendar is way more difficult than creating the previous apps.
 
