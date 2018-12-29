@@ -2,4 +2,13 @@
     border: 1px solid blue;
     color: white;
     /* background: rgb(255, 255, 129); */
+    width: 300px;
+    background-color: rgba(29, 29, 29, 0.85);
+    color: greenyellow;
+}
+
+.calendar-app .calendar {
+    border: 1px solid red;
+    width: 100%;
+    text-align: center;
 }

@@ -47,7 +47,7 @@ class CalendarApp extends Component {
 
 		let blanks = [];
 		for (let i=0; i<this.firstsDayOfMonth(); i++) {
-			blanks.push(<td className="emptySlot">
+			blanks.push(<td key={i*80} className="emptySlot">
 			{""}
 			</td>
 			);
