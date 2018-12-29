@@ -37,11 +37,25 @@ class CalendarApp extends Component {
 		return firstDay;
 	}
 
+	setMonth = (month) => {
+		let monthNo = this.months.indexOf(month);
+		let dateContext = Object.assign({}, this.state.dateContext);
+		dateContext = moment(dateContext).set("month", monthNo);
+		this.setState({
+			dateContext: dateContext
+		});
+	}
+
+	onSelectChange = (e, data) => {
+		this.setMonth(data);
+		this.props.onChangeMonth && this.props.onChangeMonth();
+	}
+
 	SelectList = (props) => {
 		let popup = props.data.map((data) => {
 			return (
 				<div key={data}>
-					<a href="#">
+					<a href="#" onClick={(e) => {this.onSelectChange(e, data)}}>
 						{data}
 					</a>
 				</div>
@@ -62,12 +76,61 @@ class CalendarApp extends Component {
 
 	MonthNav = () => {
 		return (
-			<span onClick={(e) => {this.onChangeMonth(e,this.month())}} 
+			<span 
+			onClick={(e) => {this.onChangeMonth(e,this.month())}} 
 			className="label-month">
 				{this.month()}
 				{this.state.showMonthPopup &&
 				<this.SelectList data={this.months} />
 				}
+			</span>
+		);
+	}
+
+	showYearEditor = () => {
+		this.setState({
+			showYearNav: true
+		});
+	}
+
+	setYear = (year) => {
+		let dateContext = Object.assign({}, this.state.dateContext);
+		dateContext = moment(dateContext).set("year", year);
+		this.setState({
+			dateContext: dateContext
+		});
+	}
+
+	onYearChange = (e) => {
+		this.setYear(e.target.value);
+		this.props.onYearChange && this.props.onYearChange(e, e.target.value);
+	}
+
+	onKeyUpYear = (e) => {
+		if (e.which === 13 || e.which === 27) {
+			this.setYear(e.target.value);
+			this.setState({
+				showYearNav: false
+			});
+		}
+	}
+
+	YearNav = () => {
+		return (
+			this.state.showYearNav ? 
+			<input 
+				defaultValue = {this.year()}
+				className = "editor-year"
+				ref = {(yearInput) => {this.yearInput = yearInput}}
+				onKeyUp = {(e) => this.onKeyUpYear(e)}
+				onChange = {(e) => this.onYearChange(e)}
+				type = "number"
+				placeholder = "year" />
+			:
+			<span 
+				className="label-year"
+				onDoubleClick={(e) => {this.showYearEditor()}}>
+				{this.year()}
 			</span>
 		);
 	}
@@ -136,6 +199,8 @@ class CalendarApp extends Component {
 						<tr className="calendar-header">
 							<td colSpan="5">
 								<this.MonthNav />
+								{" "}
+								<this.YearNav />
 							</td>
 						</tr>
 					</thead>
