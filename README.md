@@ -22,5 +22,6 @@ Read the documentation and found some tutorials to make the calendar work. Creat
 # Packages
 
 react-draggable: Used to make the components draggable. https://www.npmjs.com/package/react-draggable.
+
 moment.js: Used to create the react-calendarapp. https://momentjs.com/
 
