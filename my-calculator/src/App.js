@@ -5,9 +5,9 @@ import './App.css';
 
 import Calculator from './Components/Calculator/Calculator';
 import WeatherApp from './Components/WeatherApp/WeatherApp';
+import CalendarApp from './Components/CalendarApp/CalendarApp';
 
 class App extends Component {
-
   render() {
     return (
       <div className="App">
@@ -41,6 +41,7 @@ class App extends Component {
           <WeatherApp/>
           </div>
         </Draggable>
+        <CalendarApp/>
       </div>
     );
   }
