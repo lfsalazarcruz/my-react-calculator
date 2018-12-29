@@ -102,7 +102,7 @@ class CalendarApp extends Component {
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr className="weekdays">
 							{weekdays}
 						</tr>
 						{trElems}
