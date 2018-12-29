@@ -29,8 +29,10 @@ Part 2: https://www.youtube.com/watch?v=5vYJO0zRfbQ&index=3&list=LLlnguOdb1vnm2s
 # Packages
 
 react-draggable: Used to make the components draggable. 
-source: https://www.npmjs.com/package/react-draggable
+
+Source: https://www.npmjs.com/package/react-draggable
 
 moment.js: Used to create the react-calendarapp. Gives your the years, months, weeks, and days arrays.
-source: https://momentjs.com/
+
+Source: https://momentjs.com/
 
