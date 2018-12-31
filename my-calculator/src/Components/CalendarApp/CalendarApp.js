@@ -37,35 +37,53 @@ class CalendarApp extends Component {
 		return firstDay;
 	}
 
-	setMonth = (month) => {
-		let monthNo = this.months.indexOf(month);
+	// setMonth = (month) => {
+	// 	let monthNo = this.months.indexOf(month);
+	// 	let dateContext = Object.assign({}, this.state.dateContext);
+	// 	dateContext = moment(dateContext).set("month", monthNo);
+	// 	this.setState({
+	// 		dateContext: dateContext
+	// 	});
+	// }
+
+	// onSelectChange = (e, data) => {
+	// 	this.setMonth(data);
+	// 	this.props.onChangeMonth && this.props.onChangeMonth();
+	// }
+
+	// SelectList = (props) => {
+	// 	let popup = props.data.map((data) => {
+	// 		return (
+	// 			<div key={data}>
+	// 				<a href="#" onClick={(e) => {this.onSelectChange(e, data)}} className="months-tab">
+	// 					{data}
+	// 				</a>
+	// 			</div>
+	// 		);
+	// 	});
+	// 	return (
+	// 		<div className="month-popup">
+	// 			{popup}
+	// 		</div>
+	// 	);
+	// }
+
+	prevMonth = () => {
 		let dateContext = Object.assign({}, this.state.dateContext);
-		dateContext = moment(dateContext).set("month", monthNo);
+		dateContext = moment(dateContext).subtract(1, "month");
 		this.setState({
 			dateContext: dateContext
 		});
+		this.props.onPrevMonth && this.props.onPrevMonth();
 	}
 
-	onSelectChange = (e, data) => {
-		this.setMonth(data);
-		this.props.onChangeMonth && this.props.onChangeMonth();
-	}
-
-	SelectList = (props) => {
-		let popup = props.data.map((data) => {
-			return (
-				<div key={data}>
-					<a href="#" onClick={(e) => {this.onSelectChange(e, data)}}>
-						{data}
-					</a>
-				</div>
-			);
+	nextMonth = () => {
+		let dateContext = Object.assign({}, this.state.dateContext);
+		dateContext = moment(dateContext).add(1, "month");
+		this.setState({
+			dateContext: dateContext
 		});
-		return (
-			<div className="month-popup">
-				{popup}
-			</div>
-		);
+		this.props.onNextMonth && this.props.onNextMonth();
 	}
 
 	onChangeMonth = (e, month) => {
@@ -77,7 +95,7 @@ class CalendarApp extends Component {
 	MonthNav = () => {
 		return (
 			<span 
-			onClick={(e) => {this.onChangeMonth(e,this.month())}} 
+			// onClick={(e) => {this.onChangeMonth(e,this.month())}} 
 			className="label-month">
 				{this.month()}
 				{this.state.showMonthPopup &&
@@ -196,11 +214,16 @@ class CalendarApp extends Component {
 			<div className="calendar-app">
 				<table className="calendar">
 					<thead>
-						<tr className="calendar-header">
-							<td colSpan="5">
-								<this.MonthNav />
+						<tr>
+							<td colSpan="5" className="calendar-header">
+								<b><this.MonthNav />
 								{" "}
-								<this.YearNav />
+								<this.YearNav /></b>
+							</td>
+							<td colSpan="2" className="nav-month">
+								<i class="fas fa-angle-left" onClick={(e) => {this.prevMonth()}}></i>
+								{"    "}
+								<i class="fas fa-angle-right" onClick={(e) => {this.nextMonth()}}></i>
 							</td>
 						</tr>
 					</thead>
