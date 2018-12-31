@@ -34,3 +34,5 @@ react-draggable: Used to make the components draggable. https://www.npmjs.com/pa
 
 moment.js: Used to create the react-calendarapp. Gives your the years, months, weeks, and days arrays. https://momentjs.com/
 
+Font Awesome: Used to create calendar arrows. https://fontawesome.com/
+
